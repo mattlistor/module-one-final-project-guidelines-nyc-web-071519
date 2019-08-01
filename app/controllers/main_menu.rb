@@ -2,9 +2,9 @@ def main_menu
     20.times do
         Book.create(title: Faker::Book.title, author: Faker::Book.author, publisher: Faker::Book.publisher, genre: Faker::Book.genre)
     end
+    cart = [] ##### CREATES A CART ARRAY #####
     try_again = true
     while try_again
-      puts "|| -------------------------"
       puts "|| Here are the books we currently have in stock:"
       puts "||"
       Book.all.each do |b|
@@ -14,7 +14,6 @@ def main_menu
       end
       puts "|| What book would you like to order?"
       print "|| "
-      ##### CREATE A CART ARRAY #####
       input = gets.chomp
       title = input.downcase
       book_titles = Book.all.map { |b| b.title.downcase }
@@ -38,7 +37,7 @@ def main_menu
           puts "|| -------------------------"
           puts "|| We do not have that book in our inventory!"
           puts "|| -------------------------"
-          puts "|| -------------------------"
+          puts "||"
           puts "||"
         end
     end
