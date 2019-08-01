@@ -1,3 +1,9 @@
+# What to do next:
+# Figure out how to implement a shopping cart to add books/orders to
+# Recommend a book to the customer
+# Allow the customer to change at least the shipping address of one of their orders
+# Allow the customer to delete an order (from their cart)
+
 def main_menu
     20.times do
         Book.create(title: Faker::Book.title, author: Faker::Book.author, publisher: Faker::Book.publisher, genre: Faker::Book.genre)
