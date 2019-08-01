@@ -14,11 +14,12 @@ class Order < ActiveRecord::Base
         book = Book.all.find{|b| self.book_id == b.id}
         customer = Customer.all.find{|c| self.customer_id == c.id}
         puts "|| **************** YOUR PURCHASE ****************"
-        puts "|| Your name:      #{customer.name}"
-        puts "|| Book purchased: #{book.title}"
-        puts "|| Purchase date:  #{self.date_of_order}"
-        puts "|| Shipping date:  #{self.estimated_shipping_date}"
-        puts "|| Arrival date:   #{self.estimated_arrival_date}"
+        puts "|| Your name:        #{customer.name}"
+        puts "|| Book purchased:   #{book.title}"
+        puts "|| Shipping address: #{self.shipping_address}"
+        puts "|| Purchase date:    #{self.date_of_order}"
+        puts "|| Shipping date:    #{self.estimated_shipping_date}"
+        puts "|| Arrival date:     #{self.estimated_arrival_date}"
         puts "|| ***********************************************"
         puts "||"
     end
