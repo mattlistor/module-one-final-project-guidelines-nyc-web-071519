@@ -4,7 +4,7 @@ def main_menu
     end
     cart = [] ##### CREATES A CART ARRAY #####
     try_again = true
-    while try_again
+    while try_again # prints out the books and asks the user to order a book while try_again is still true
       puts "|| Here are the books we currently have in stock:"
       puts "||"
       Book.all.each do |b|
