@@ -23,12 +23,15 @@ def main_menu
           ship_date = Faker::Date.forward(3)
           arrive_date = Faker::Date.between(Faker::Date.forward(3), Faker::Date.forward(18))
           o1 = Order.create(customer_id: c1.id, book_id: book.id, shipping_address: c1.home_address, is_shipped?: false, date_of_order: Faker::Date.between(Date.today, Date.today), estimated_shipping_date: ship_date, estimated_arrival_date: arrive_date)
+          # o1 << cart # pushes the order into the cart
           puts "|| -------------------------"
           puts "|| -------------------------"
           puts "||"
           o1.print_receipt
           puts "|| Thank you for your order! Your book should arrive very soon!"
           puts "||"
+          # c1.recommend_book_by_genre
+          # puts "||"
           puts "|| Would you like to make another purchase? (y/n)"
           print "|| "
           answer = gets.chomp
@@ -36,8 +39,8 @@ def main_menu
         else
           puts "|| -------------------------"
           puts "|| We do not have that book in our inventory!"
-          puts "|| -------------------------"
           puts "||"
+          puts "|| -------------------------"
           puts "||"
         end
     end
