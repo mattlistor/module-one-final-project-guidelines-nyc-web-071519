@@ -29,6 +29,6 @@ After making your first order, the app will ask you if you would like to purchas
 
 Type in the number corresponding to the option you want to take. Typing in "1" will display the list of purchases you've made and then take you back to the list of options, typing in "2" will print out the info of the book the app has recommended to you (and then take you back to the list of options), and typing in "4" takes you back to the shop menu where the inventory of books currently in stock is displayed. Typing in "3," meanwhile, takes you to a new menu in which you are given the options to either change the shipping address of one of your orders, cancel an order, or go back to your options. Follow what the UI of the app prompts you to enter as input in order to navigate through this menu.
 
-To exit this app at any time, just type 'Ctrl+C' and then you're done.
+To exit this app at any time, just type `Ctrl+C` and then you're done.
 
 And that's the Bookstore Database!
