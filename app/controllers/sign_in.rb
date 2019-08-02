@@ -2,7 +2,7 @@ def sign_in
     Order.destroy_all
     Customer.destroy_all
     Book.destroy_all
-    puts "|| WELCOME TO OUR SHOESTORE DATABASE"
+    puts "|| WELCOME TO OUR BOOKSTORE DATABASE"
     puts "||"
     puts "|| What is your first name?"
     print "|| "

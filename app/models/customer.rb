@@ -66,8 +66,9 @@ class Customer < ActiveRecord::Base
         favorite_genre_list = genre_count_hash.keys
 
         #picks a random book to possibly recommend
+        #binding.pry
         if (favorite_genre_list & books_to_choose_from_genre_list) == []
-            puts "There are no books to recommend!"
+            puts "|| There are no books to recommend by your favorite genre!".upcase
             nil
         else  
             #chooses what genre we're going to recommend out of all the favorite genres
@@ -78,12 +79,12 @@ class Customer < ActiveRecord::Base
 
             #chooses a random book out of that list to recommend
             book_recommendation = books_with_chosen_genre[rand(0..(books_with_chosen_genre.length-1))]
+            #binding.pry
+            #print out the info for that random book
+            puts "|| #{self.name}, here is another #{chosen_genre} book:".upcase
+            puts "||"
+            book_recommendation.print_book_info
+            nil
         end
-        binding.pry
-        #print out the info for that random book
-        puts "|| #{self.name}, here is another #{chosen_genre.downcase} book:"
-        puts "||"
-        book_recommendation.print_book_info
-        nil
     end
 end

@@ -40,27 +40,4 @@ class Book < ActiveRecord::Base
         puts "|| Publisher: #{self.publisher}"
         puts "|| Genre: #{self.genre}"
     end
-
-    # def print_customers
-    #     books_orders = Order.all.select do |o|
-    #         o.book_id == self.id
-    #     end
-    #     customer_array = []
-    #     books_orders.each do |o|
-    #         Customer.all.each do |c|
-    #             if o.customer_id == c.id
-    #                 customer_array << c
-    #             end
-    #         end
-    #     end
-
-    #     puts "Buyers of #{self.title}"
-    #     puts "-------------------------"
-    #     x = 1
-    #     customer_array.sort_by{|c| c.last_name}.uniq.each do |c|
-    #         puts "#{x}. #{c.name}"
-    #         x += 1
-    #     end
-    #     nil
-    # end 
 end
