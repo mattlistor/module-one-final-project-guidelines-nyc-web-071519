@@ -1,8 +1,8 @@
-# The Shoestore Database
+# The Bookstore Database
 
 ## Introduction
 
-The Shoestore Database is an application written in Ruby from which users (customers) have the ability to choose among 50 books to order and ship to either their homes or a different location. These books come from a wide variety of authors, publishers, and genres, and the selection of books, provided by the Ruby gem Faker, is different with every login.
+The Bookstore Database is an application written in Ruby from which users (customers) have the ability to choose among 50 books to order and ship to either their homes or a different location. These books come from a wide variety of authors, publishers, and genres, and the selection of books, provided by the Ruby gem Faker, is different with every login.
 
 ## How to Install
 
@@ -31,4 +31,4 @@ Type in the number corresponding to the option you want to take. Typing in "1" w
 
 To exit this app at any time, just type 'Ctrl+C' and then you're done.
 
-And that's the Shoestore Database!
+And that's the Bookstore Database!
